@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang "pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Formulário</title>
+	<style type="text/css">
+		h2{
+			font-family: Tahoma;
+			text-align: center;
+			border-width: 3px;
+			border-style: solid;
+			border-radius: 10px;
+			background-color: lightskyblue;
+			color: black;
+		}
+        #principal{
+        	width: 500px;
+            position: absolute;
+            left: 50%;
+            border-width: 10px;
+			border-style: solid;
+			border-width: 10px;
+			border-top-color: blue;
+			border-left-color: blue;
+			border-right-color: navy;
+			border-bottom-color: navy;
+			border-radius: 15px;
+			padding: 20px;
+			margin-left: -250px;
+			background-color: steelblue;
+			font-family: Verdana;
+			color: lightcyan;
+        }
+
+	</style>
+</head>
+<body>
+	<div id="principal">
+	<h2>PROGRAMAÇÃO PARA INTERNET 1</h2><br>
+		<form name="formulario" method="post">
+			<label>Nome: <input type="text" name="nome"></label><br><br>
+			<label>Idade: <input type="text" name="idade"></label><br><br>
+			<label>Sexo: M<input type="radio" name="sexo" value="M"> F<input type="radio" name="sexo" value="F"></label><br><br>
+			<label>Endereço: <input type=""></label><br><br>
+			<label>Curso:
+				<select name="curso">
+					<option>Tecnologia em Sistemas para Internet</option>
+					<option>Engenharia Mecânica</option>
+				</select>
+			</label><br><br>
+			<label>Comentários:<br> <textarea cols="30" rows="4" name="comentarios">Deixe seus comentários</textarea></label><br><br>
+			<input type="reset" value= "Resetar">
+			<input type="submit" value="Enviar">
+		</form>
+	</div>
+</body>
+</html>
