@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+
+<script>
+	function envia(){
+		var mensagem = "";
+		if (document.form1.nome.value == ""){
+			mensagem = mensagem + "\n\tNome;";
+		}
+		if (mensagem != "" ){
+			alert("Os sequintes campos não foram preenchidos corretamente: " + mensagem)
+		}
+		else {
+			document.form1.submit();
+		}
+}
+</script>
+</head>
+<body>
+	<FORM ACTION="resultado.asp" METHOD="post" NAME="form1">
+		<INPUT NAME="nome" TYPE="text" SIZE="30" MAXLENGTH="50">
+		<INPUT NAME="enviar" TYPE="button" VALUE="Enviar" onclick="envia();">
+	</FORM>
+</body>
+</html>

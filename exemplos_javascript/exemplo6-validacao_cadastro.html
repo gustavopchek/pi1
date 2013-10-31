@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+
+<script>
+	function enviar(){
+		if (document.form1.nome.value == ""){
+		alert("O campo Nome não pode ser Nulo");
+		}
+	}
+</script>
+</head>
+<body>
+	<B>Cadastre-se </B>
+	<FORM ACTION="resultado.asp" METHOD="post" NAME="form1">
+	<INPUT NAME="nome" TYPE="text" SIZE="30" MAXLENGTH="50" onblur="enviar();">
+</FORM>
+</body>
+</html>

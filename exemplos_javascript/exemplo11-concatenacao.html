@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<script>
+	var userName, txtObj, addObj;
+	function load() {
+		userName = prompt("Seu nome?");
+		addObj = document.getElementById("add");
+		txtObj = document.getElementById("txt");
+		var msg = "Bem vindo " + userName + " à página \"" + document.title + "\"";
+		alert(msg);
+	}
+	function exit()
+	{ alert("Adeus " + userName); }
+	function concat() {
+		txtObj.value += addObj.value;
+		addObj.value = "";
+	}
+	function erase() { txtObj.value= ""; }
+</script>
+<body onload = 'load();' onunload = 'exit();'>
+	<p> Texto a acrescentar:
+	<input type="text" id="add" />
+	</p>
+	<input type="button" onclick='concat();' value="Acrescentar" />
+	<input type="button" onclick='erase();' value="Apagar" />
+	<textarea id="txt" rows="4" cols="30">
+	texto inicial
+	</textarea>
+</body>
+</html>
