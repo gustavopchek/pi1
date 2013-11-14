@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<script>
+	function setarCookie(){ var nome = prompt("Qual é o seu nome?"); var cookie = "nome:" + nome; document.cookie = cookie; }
+	function setarCookieData(){
+		var nome = prompt("Qual é o seu nome?");0
+		var cookie = "nome:" + nome; 
+		var dataExpirar = new Date();
+		dataExpirar.setDate(dataExpirar.getDate()+1);
+		document.cookie= cookie + ";expires=" + dataExpirar.toGMTString();
+	}
+	function lerCookie(){
+		var cookie = document.cookie;
+		var quebra = cookie.split(":");
+		var nome = quebra[1];
+		alert("Seu nome é:" + nome);
+	}
+</script>
+<body>
+	<input type="button" value="Gravar cookie" onclick="setarCookie();">
+	<input type="button" value="Ler cookie" onclick="lerCookie();">
+	<input type="button" value="Cookie Data" onclick="setarCookieData();">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<script>
+	function onLoad(){
+		var cookie = document.cookie;
+		var quebra = cookie.split(":");
+		var nome2 = quebra[1];
+		var nome = prompt("Qual é o seu nome?");
+		if (document.cookie.indexOf(nome) == -1){
+			setarCookieData(nome);
+		}
+		else{
+			alert("Bem vindo novamente " + nome);
+		}
+	}
+	function setarCookieData(nome){
+		alert("Bem vindo " + nome);
+		var cookie = "nome:" + nome; 
+		var dataExpirar = new Date();
+		dataExpirar.setDate(dataExpirar.getDate()+1);
+		document.cookie= cookie + ";expires=" + dataExpirar.toGMTString();
+	}
+</script>
+<body onload = 'onLoad();'>
+
+</body>
+</html>
