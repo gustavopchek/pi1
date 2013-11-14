@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<script>
+	window.onload = function(){
+		var canvas=document.getElementById("myCanvas");
+		ctx = canvas.getContext("2d");
+		ctx.strokestyle='#800080';
+		ctx.lineWidth=2;
+		ctx.fillStyle='rgba(0,255,0,0.4)';
+		ctx.fillRect(150,60,200,70);
+		ctx.strokeRect(148,58,204,74);
+	}
+</script>
+<body>
+	<canvas id="myCanvas" width="200" height="100"></canvas>
+</body>
+</html>

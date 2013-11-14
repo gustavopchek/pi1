@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<title>Bandeiras em Canvas</title>
+<meta charset="utf-8">
+<script>
+	function alemanha() {
+		var canvas=document.getElementById("myCanvas");
+		ctx = canvas.getContext("2d");
+		ctx.beginPath();
+		ctx.fillStyle = '#000';
+		ctx.fillRect(0, 0, 400, 80);
+		ctx.fillStyle = '#ff0000';
+		ctx.fillRect(0, 80, 400, 160);
+		ctx.fillStyle = '#ffff00';
+		ctx.fillRect(0, 160, 400, 240);
+	}
+	function belgica(){
+		var canvas=document.getElementById("myCanvas");
+		ctx = canvas.getContext("2d");
+		ctx.beginPath();
+		ctx.fillStyle = '#000';
+		ctx.fillRect(0, 0, 133, 240);
+		ctx.fillStyle = '#ffff00';
+		ctx.fillRect(133, 0, 266, 240);
+		ctx.fillStyle = '#ff0000';
+		ctx.fillRect(266, 0, 400, 240);
+	}
+	function japao(){
+		var canvas=document.getElementById("myCanvas");
+		ctx = canvas.getContext("2d");
+		ctx.beginPath();
+		ctx.fillStyle='#ff0000';
+		ctx.arc(200,120,60,0, Math.PI*2, true);
+		ctx.fill();
+		ctx.strokeRect(0,0,400,240);
+		ctx.strokeStyle('#000');
+		ctx.lineWidth = 2;
+	}
+</script>
+<body>
+	<canvas id="myCanvas" width="400" height="240"></canvas>
+	<br>
+	<input type="button" value="Alemanha" onclick='alemanha();'>
+	<input type="button" value="Bélgica" onclick='belgica();'>
+	<input type="button" value="Japão" onclick='japao();'>
+</body>
+</html>
