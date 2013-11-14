@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<script>
+function onload(){
+	contador = parseInt(localStorage.getItem('cont'));
+	if (isNaN(contador)){
+		localStorage.cont = 1;
+	}
+	else{
+		localStorage.cont = parseInt(localStorage.cont) + 1;
+		alert("Essa é a sua visita de numero: " + contador);
+	}
+}
+</script>
+<body onload = 'onload();'>
+
+</body>
+</html>
